@@ -11,6 +11,7 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Portfolio from "./Components/Portfolio";
+import Education from "./Components/Education";
 
 import "./styles.css";
 
@@ -18,21 +19,21 @@ import "./styles.css";
  * This object represents your information. The project is set so that you
  * only need to update these here, and values are passed a properties to the
  * components that need that information.
- *
- * Update the values below with your information.
- *
- * If you don't have one of the social sites listed, leave it as an empty string.
- */
+*
+* Update the values below with your information.
+*
+* If you don't have one of the social sites listed, leave it as an empty string.
+*/
 const siteProps = {
-  name: "Alexandrie Grenier",
-  title: "Web Designer & Content Creator",
-  email: "alex@example.com",
-  gitHub: "microsoft",
-  instagram: "microsoft",
-  linkedIn: "satyanadella",
+  name: "Nilay Ganvit",
+  title: "Quant Analyst & Software Dev",
+  email: "NilayGanvit@gmail.com",
+  gitHub: "NilayGanvit",
+  instagram: "xelin252",
+  linkedIn: "nilay-ganvit",
   medium: "",
-  twitter: "microsoft",
-  youTube: "Code",
+  twitter: "nilayganvit252",
+  youTube: "nilayganvit8899",
 };
 
 const primaryColor = "#4E567E";
@@ -45,6 +46,7 @@ const App = () => {
       <Home name={siteProps.name} title={siteProps.title} />
       <About />
       <Portfolio />
+      <Education />
       <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
     </div>
   );

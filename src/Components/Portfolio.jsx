@@ -19,7 +19,7 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/design-desk.jpeg";
+import image from "../images/melody-zimmerman-Mn1CIHBSnJs-unsplash.jpg";
 
 const imageAltText = "desktop with books and laptop";
 
@@ -31,28 +31,58 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "Term Deposit Prediction",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "Trained a Machine Learning model to detect if clients will make a term deposit or not with upto 97.15% accuracy",
+    url: "https://github.com/NilayGanvit/CS304N",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Quantitative & Algorithmic Trading",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "Created Strategies to recommend trades and reduce risk to get upto 21.83% returns and downto 3.15% drawdowns.",
+    url: "https://github.com/NilayGanvit/Algo-trading",
+  },
+  {
+    title: "Credit Card Default Prediction",
+    description:
+      "Trained Machine Learning model that can predict whether a person a customer will default on a credit card payment",
+    url: "https://github.com/NilayGanvit/cynaptics",
+  },
+  {
+    title: "Hospital Management System",
+    description:
+      "A PHP web portal hosted using XAMPP that serves as a centralized healthcare for Doctors,Patients and Hospitals.",
+    url: "https://github.com/NilayGanvit/Hospital-Management-Project",
+  },
+  {
+    title: "Hostel Management System",
+    description:
+      "This web portal acts as an centralised website for 5 Hostels of IIT Indore and management for the wardens.",
+    url: "https://github.com/NilayGanvit/Hostel-Management-System",
+  },
+  {
+    title: "Face Mask Detection",
+    description:
+      "Trained a Machine Learning model that can detect whether a person is wearing a mask or not with 93.88\% accuracy",
+    url: "https://github.com/NilayGanvit/IITISoC",
+  },
+  {
+    title: "Supply Chain Opitimization",
+    description:
+      "Implemented Mixed Integer Linear Program (MILP) to optimize Industrial Chemical supply chain",
+    url: "https://github.com/NilayGanvit/CS307",
   },
   {
     title: "My Resume Site",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "Created from Microsoft's resume workshop and deployed to Azure Static Web Apps. Includes my experience and design abilities.",
+    url: "https://happy-stone-084d72300.4.azurestaticapps.net",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "GitHub",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "See all my Projects, Contributions and Things I have learnd from my Courses and Assignments",
+    url: "https://github.com/NilayGanvit",
   },
 ];
 
@@ -64,7 +94,12 @@ const Portfolio = () => {
         <div style={{ maxWidth: "40%", alignSelf: "center" }}>
           <img
             src={image}
-            style={{ height: "90%", width: "100%", objectFit: "cover" }}
+            style={{
+              height: "90%",
+              width: "100%",
+              objectFit: "cover",
+              animation: "1s ease-out 0s 1 slideIn",
+            }}
             alt={imageAltText}
           />
         </div>
