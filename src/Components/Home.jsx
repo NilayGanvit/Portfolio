@@ -27,15 +27,30 @@ const imageAltText =
 
 const Home = ({ name, title }) => {
   return (
-    <section id="home" className="min-height">
-      <img className="background" src={image} alt={imageAltText} loading="eager" decoding="async" />
+    <section id="home" className="min-height" role="banner">
+      <img 
+        className="background" 
+        src={image} 
+        alt={imageAltText} 
+        loading="eager" 
+        decoding="async" 
+        role="presentation"
+      />
       <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "17rem" }}>
         <h1>{name}</h1>
         <h2>{title}</h2>
       </div>
       <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
-        <a href="#about" aria-label="Scroll to about section" role="button" tabIndex="0"
-          onKeyPress={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.currentTarget.click(); } }}
+        <a 
+          href="#about" 
+          aria-label="Scroll to about section" 
+          role="button" 
+          tabIndex="0"
+          onKeyPress={(e) => { 
+            if (e.key === 'Enter' || e.key === ' ') { 
+              e.currentTarget.click(); 
+            } 
+          }}
         >
           <img
             src={arrowSvg}
@@ -45,7 +60,8 @@ const Home = ({ name, title }) => {
               animation: "bounce 2s infinite",
               filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.3))"
             }}
-            alt="Scroll down arrow"
+            alt="Scroll down to about section"
+            decoding="async"
           />
         </a>
       </div>

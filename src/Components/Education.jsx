@@ -34,7 +34,7 @@ const Education = () => {
       <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap", justifyContent: "center", gap: "2rem" }}>
         <div className="container" style={{ maxWidth: "50%" }}>
           {EducationList.map((education, index) => (
-            <div
+            <article
               className="box"
               key={education.title}
               style={{
@@ -48,13 +48,14 @@ const Education = () => {
                 <h3 style={{ flexBasis: "40px" }}>{education.title}</h3>
               </a>
               <p className="small">{education.description}</p>
-            </div>
+            </article>
           ))}
         </div>
         <div style={{ maxWidth: "40%", alignSelf: "center", minWidth: "300px" }}>
           <img
             src={image}
             loading="lazy"
+            decoding="async"
             style={{
               height: "90%",
               width: "100%",

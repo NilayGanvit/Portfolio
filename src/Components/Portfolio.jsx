@@ -95,6 +95,7 @@ const Portfolio = () => {
           <img
             src={image}
             loading="lazy"
+            decoding="async"
             style={{
               height: "90%",
               width: "100%",
@@ -107,7 +108,7 @@ const Portfolio = () => {
         </div>
         <div className="container" style={{ maxWidth: "50%" }}>
           {projectList.map((project, index) => (
-            <div
+            <article
               className="box"
               key={project.title}
               style={{
@@ -115,13 +116,17 @@ const Portfolio = () => {
                 transition: "transform 0.2s ease, box-shadow 0.2s ease"
               }}
             >
-              <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title} project`}
+              <a 
+                href={project.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label={`Visit ${project.title} project`}
                 style={{ outline: "none" }}
               >
                 <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
               </a>
               <p className="small">{project.description}</p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

@@ -42,6 +42,7 @@ const secondaryColor = "#D2F1E4";
 const App = () => {
   return (
     <div id="main">
+      <a href="#main" className="skip-to-main">Skip to main content</a>
       <Header />
       <Home name={siteProps.name} title={siteProps.title} />
       <About />

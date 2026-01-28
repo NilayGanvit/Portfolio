@@ -41,7 +41,7 @@ const Footer = (props) => {
   } = props;
 
   return (
-    <div
+    <footer
       id="footer"
       style={{
         display: "flex",
@@ -53,7 +53,8 @@ const Footer = (props) => {
         width: "100vw"
       }}
     >
-      <div
+      <nav
+        aria-label="Social media links"
         style={{
           display: "flex",
           justifyContent: "center",
@@ -61,18 +62,18 @@ const Footer = (props) => {
         }}
       >
         {email && (
-          <a href={`mailto:${email}`}>
-            <img src={envelopeIcon} alt="email" className="socialIcon" />
+          <a href={`mailto:${email}`} aria-label={`Email: ${email}`}>
+            <img src={envelopeIcon} alt="" className="socialIcon" />
           </a>
         )}
         {devDotTo && (
-          <a href={`https://dev.to/${devDotTo}`} target="_blank" rel="noopener noreferrer">
-            <img src={devDotToIcon} alt="Dev.to" className="socialIcon" />
+          <a href={`https://dev.to/${devDotTo}`} target="_blank" rel="noopener noreferrer" aria-label="Dev.to profile">
+            <img src={devDotToIcon} alt="" className="socialIcon" />
           </a>
         )}
         {gitHub && (
-          <a href={`https://github.com/${gitHub}`} target="_blank" rel="noopener noreferrer">
-            <img src={gitHubIcon} alt="GitHub" className="socialIcon" />
+          <a href={`https://github.com/${gitHub}`} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+            <img src={gitHubIcon} alt="" className="socialIcon" />
           </a>
         )}
         {instagram && (
@@ -80,8 +81,9 @@ const Footer = (props) => {
             href={`https://www.instagram.com/${instagram}`}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram profile"
           >
-            <img src={instagramIcon} alt="Instagram" className="socialIcon" />
+            <img src={instagramIcon} alt="" className="socialIcon" />
           </a>
         )}
         {linkedIn && (
@@ -89,18 +91,19 @@ const Footer = (props) => {
             href={`https://www.linkedin.com/in/${linkedIn}`}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
           >
-            <img src={linkedInIcon} alt="LinkedIn" className="socialIcon" />
+            <img src={linkedInIcon} alt="" className="socialIcon" />
           </a>
         )}
         {medium && (
-          <a href={`https://medium.com/@${medium}`} target="_blank" rel="noopener noreferrer">
-            <img src={mediumIcon} alt="Medium" className="socialIcon" />
+          <a href={`https://medium.com/@${medium}`} target="_blank" rel="noopener noreferrer" aria-label="Medium profile">
+            <img src={mediumIcon} alt="" className="socialIcon" />
           </a>
         )}
         {twitter && (
-          <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
-            <img src={twitterIcon} alt="Twitter" className="socialIcon" />
+          <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer" aria-label="Twitter profile">
+            <img src={twitterIcon} alt="" className="socialIcon" />
           </a>
         )}
         {youTube && (
@@ -108,15 +111,16 @@ const Footer = (props) => {
             href={`https://www.youtube.com/c/${youTube}`}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="YouTube channel"
           >
-            <img src={youTubeIcon} alt="YouTube" className="socialIcon" />
+            <img src={youTubeIcon} alt="" className="socialIcon" />
           </a>
         )}
-      </div>
+      </nav>
       <p className="small" style={{ marginTop: 0, color: "#f0f0f0" }}>
         Created by {name}
       </p>
-    </div>
+    </footer>
   );
 };
 

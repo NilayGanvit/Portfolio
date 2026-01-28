@@ -4,6 +4,17 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
 
+:root {
+  --primary-color: #4e567e;
+  --secondary-color: #d2f1e4;
+  --text-dark: #1a1a1a;
+  --text-light: #f0f0f0;
+  --border-radius: 8px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 8px 16px rgba(78, 86, 126, 0.15);
+  --transition: all 0.3s ease;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -16,6 +27,24 @@ body {
   overflow-x: hidden;
   padding: 0;
   width: 100%;
+  color: var(--text-dark);
+}
+
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  text-decoration: none;
+  border-radius: 0 0 var(--border-radius) 0;
+}
+
+.skip-to-main:focus {
+  top: 0;
+  border-radius: 0;
 }
 
 div#main {
@@ -94,47 +123,52 @@ li {
 }
 
 li::marker {
-  color: #4e567e;
+  color: var(--primary-color);
 }
 
 a {
-  color: black;
+  color: var(--text-dark);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: var(--transition);
+  position: relative;
 }
 
 a:hover {
-  color: #4e567e;
+  color: var(--primary-color);
 }
 
 a:focus,
 button:focus {
-  outline: 2px solid #4e567e;
+  outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
 
-.skip-to-main:focus {
-  top: 0;
-  border-radius: 0;
+button {
+  transition: var(--transition);
+}
+
+button:hover {
+  opacity: 0.9;
 }
 
 .box {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: var(--border-radius);
 }
 
 .box:hover,
 .box:focus-within {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(78, 86, 126, 0.15);
+  box-shadow: var(--shadow-md);
 }
 
 a:focus-visible {
-  outline: 2px solid #4e567e;
+  outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
 
 button:focus-visible {
-  outline: 2px solid #4e567e;
+  outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
 
@@ -146,13 +180,15 @@ button:focus-visible {
 }
 
 .container .box {
-  border-radius: 10px;
   border: 1px solid rgb(204, 204, 204);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 24px 16px;
   text-align: center;
+  background: white;
+  transition: var(--transition);
+  border-radius: var(--border-radius);
 }
 
 img.socialIcon {

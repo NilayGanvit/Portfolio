@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   return (
-    <div
+    <header
       style={{
         position: "fixed",
         display: "flex",
@@ -55,11 +55,11 @@ const Header = () => {
         }}
         className="desktop-nav"
       >
-        <a href="#home" aria-label="Navigate to home section">Home</a>
-        <a href="#about" aria-label="Navigate to about section">About</a>
-        <a href="#portfolio" aria-label="Navigate to portfolio section">Portfolio</a>
-        <a href="#education" aria-label="Navigate to education section">Education</a>
-        <a href="#footer" aria-label="Navigate to contact section">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#education">Education</a>
+        <a href="#footer">Contact</a>
       </nav>
 
       <button
@@ -97,13 +97,13 @@ const Header = () => {
         }}
         className="mobile-nav"
       >
-        <a href="#home" onClick={handleNavClick} aria-label="Navigate to home section">Home</a>
-        <a href="#about" onClick={handleNavClick} aria-label="Navigate to about section">About</a>
-        <a href="#portfolio" onClick={handleNavClick} aria-label="Navigate to portfolio section">Portfolio</a>
-        <a href="#education" onClick={handleNavClick} aria-label="Navigate to education section">Education</a>
-        <a href="#footer" onClick={handleNavClick} aria-label="Navigate to contact section">Contact</a>
+        <a href="#home" onClick={handleNavClick}>Home</a>
+        <a href="#about" onClick={handleNavClick}>About</a>
+        <a href="#portfolio" onClick={handleNavClick}>Portfolio</a>
+        <a href="#education" onClick={handleNavClick}>Education</a>
+        <a href="#footer" onClick={handleNavClick}>Contact</a>
       </nav>
-    </div>
+    </header>
   );
 };
 
