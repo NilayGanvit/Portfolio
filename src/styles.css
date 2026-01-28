@@ -143,9 +143,21 @@ img.socialIcon {
 @keyframes slideInLeft {
   0% {
     transform: translateX(-100%);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* bounce animation for arrow */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
 
@@ -154,6 +166,10 @@ img.socialIcon {
   div[style*="position: fixed"] {
     gap: 1rem;
     padding: 0.75rem;
+  }
+
+  .desktop-nav {
+    display: none !important;
   }
 
   h1 {
@@ -188,6 +204,10 @@ img.socialIcon {
   hr {
     margin: 1.5rem;
   }
+
+  .hamburger {
+    display: flex !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -215,5 +235,13 @@ img.socialIcon {
   img.socialIcon {
     height: 24px;
     width: 24px;
+  }
+
+  div[style*="width: 50%"] {
+    width: 90% !important;
+  }
+
+  div[style*="max-width: 50%"] {
+    max-width: 100% !important;
   }
 }

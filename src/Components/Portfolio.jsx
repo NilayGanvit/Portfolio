@@ -94,6 +94,7 @@ const Portfolio = () => {
         <div style={{ maxWidth: "40%", alignSelf: "center", minWidth: "300px" }}>
           <img
             src={image}
+            loading="lazy"
             style={{
               height: "90%",
               width: "100%",
@@ -105,8 +106,14 @@ const Portfolio = () => {
           />
         </div>
         <div className="container" style={{ maxWidth: "50%" }}>
-          {projectList.map((project) => (
-            <div className="box" key={project.title}>
+          {projectList.map((project, index) => (
+            <div
+              className="box"
+              key={project.title}
+              style={{
+                animation: `1s ease-out ${index * 0.1}s 1 slideInLeft`,
+              }}
+            >
               <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title} project`}>
                 <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
               </a>

@@ -50,7 +50,7 @@ const detailOrQuote =
 const About = () => {
   return (
     <section className="padding" id="about">
-      <img className="background" src={image} alt={imageAltText} />
+      <img className="background" src={image} alt={imageAltText} loading="lazy" />
       <div
         style={{
           backgroundColor: "white",
@@ -58,6 +58,8 @@ const About = () => {
           padding: "4rem",
           margin: "3rem auto",
           textAlign: "center",
+          borderRadius: "8px",
+          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
         }}
       >
         <h2>About Myself</h2>
@@ -70,14 +72,18 @@ const About = () => {
             fontSize: "1.25rem",
             margin: "2rem 3rem",
             gap: "3rem",
+            listStyle: "none",
+            paddingLeft: 0,
           }}
         >
           {skillsList.map((skill) => (
-            <li key={skill}>{skill}</li>
+            <li key={skill} style={{ marginBottom: "0.5rem" }}>
+              ✓ {skill}
+            </li>
           ))}
         </ul>
         <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <p style={{ padding: "1rem 3rem 0", fontStyle: "italic" }}>{detailOrQuote}</p>
       </div>
     </section>
   );

@@ -4,9 +4,11 @@ logs
 
 # Build files generated from Parcel
 dist
+.parcel-cache/
 
 # Dependency directories
 node_modules/
+package-lock.json
 
 # Optional npm cache directory
 .npm
@@ -17,8 +19,27 @@ node_modules/
 # dotenv environment variables file
 .env
 .env.test
+.env.local
+.env.*.local
 
-# parcel-bundler cache (https://parceljs.org/)
-.parcel-cache
-
+# OS files
 .DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/settings.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build outputs
+*.tgz
+*.tar.gz
+
+# Temp files
+.temp/
+tmp/
+*.temp

@@ -28,35 +28,42 @@ const EducationList = [
 ];
 
 const Education = () => {
-      return (
-        <section className="padding" id="education">
-            <h2 style={{ textAlign: "center" }}>Education</h2>
-            <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap", justifyContent: "center", gap: "2rem" }}>
-                <div className="container" style={{ maxWidth: "50%" }}>
-                    {EducationList.map((education) => (
-                        <div className="box" key={education.title}>
-                            <a href={education.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${education.title}`}>
-                                <h3 style={{ flexBasis: "40px" }}>{education.title}</h3>
-                            </a>
-                            <p className="small">{education.description}</p>
-                        </div>
-                    ))}
-                </div>
-                <div style={{ maxWidth: "40%", alignSelf: "center", minWidth: "300px" }}>
-                    <img
-                        src={image}
-                        style={{
-                            height: "90%",
-                            width: "100%",
-                            objectFit: "cover",
-                            animation: "1s ease-out 0s 1 slideInLeft",
-                            borderRadius: "8px",
-                        }}
-                        alt={imageAltText}
-                    />
-                </div>
+  return (
+    <section className="padding" id="education">
+      <h2 style={{ textAlign: "center" }}>Education</h2>
+      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap", justifyContent: "center", gap: "2rem" }}>
+        <div className="container" style={{ maxWidth: "50%" }}>
+          {EducationList.map((education, index) => (
+            <div
+              className="box"
+              key={education.title}
+              style={{
+                animation: `1s ease-out ${index * 0.1}s 1 slideInLeft`,
+              }}
+            >
+              <a href={education.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${education.title}`}>
+                <h3 style={{ flexBasis: "40px" }}>{education.title}</h3>
+              </a>
+              <p className="small">{education.description}</p>
             </div>
-        </section>
+          ))}
+        </div>
+        <div style={{ maxWidth: "40%", alignSelf: "center", minWidth: "300px" }}>
+          <img
+            src={image}
+            loading="lazy"
+            style={{
+              height: "90%",
+              width: "100%",
+              objectFit: "cover",
+              animation: "1s ease-out 0s 1 slideInLeft",
+              borderRadius: "8px",
+            }}
+            alt={imageAltText}
+          />
+        </div>
+      </div>
+    </section>
   );
 }
 
