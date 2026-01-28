@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Educator JS Codespace Template",
   "source": "src/index.html",
-  "homepage": "http://{NilayGanvit}.github.io/Portfolio",
+  "homepage": "https://NilayGanvit.github.io/Portfolio",
   "scripts": {
     "start": "parcel",
     "build": "parcel build",

@@ -112,6 +112,11 @@ a:focus {
   outline-offset: 2px;
 }
 
+.skip-to-main:focus {
+  top: 0;
+  border-radius: 0;
+}
+
 .container {
   display: grid;
   grid-gap: 20px;
