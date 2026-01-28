@@ -90,23 +90,24 @@ const Portfolio = () => {
   return (
     <section className="padding" id="portfolio">
       <h2 style={{ textAlign: "center" }}>Portfolio</h2>
-      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
-        <div style={{ maxWidth: "40%", alignSelf: "center" }}>
+      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap", justifyContent: "center", gap: "2rem" }}>
+        <div style={{ maxWidth: "40%", alignSelf: "center", minWidth: "300px" }}>
           <img
             src={image}
             style={{
               height: "90%",
               width: "100%",
               objectFit: "cover",
-              animation: "1s ease-out 0s 1 slideIn",
+              animation: "1s ease-out 0s 1 slideInLeft",
+              borderRadius: "8px",
             }}
             alt={imageAltText}
           />
         </div>
-        <div className="container">
+        <div className="container" style={{ maxWidth: "50%" }}>
           {projectList.map((project) => (
             <div className="box" key={project.title}>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
+              <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title} project`}>
                 <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
               </a>
               <p className="small">{project.description}</p>
