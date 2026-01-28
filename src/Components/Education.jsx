@@ -39,9 +39,12 @@ const Education = () => {
               key={education.title}
               style={{
                 animation: `1s ease-out ${index * 0.1}s 1 slideInLeft`,
+                transition: "transform 0.2s ease, box-shadow 0.2s ease"
               }}
             >
-              <a href={education.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${education.title}`}>
+              <a href={education.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${education.title}`}
+                style={{ outline: "none" }}
+              >
                 <h3 style={{ flexBasis: "40px" }}>{education.title}</h3>
               </a>
               <p className="small">{education.description}</p>

@@ -34,13 +34,16 @@ const Home = ({ name, title }) => {
         <h2>{title}</h2>
       </div>
       <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
-        <a href="#about" aria-label="Scroll to about section">
+        <a href="#about" aria-label="Scroll to about section" role="button" tabIndex="0"
+          onKeyPress={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.currentTarget.click(); } }}
+        >
           <img
             src={arrowSvg}
             style={{
               height: "3rem",
               width: "3rem",
               animation: "bounce 2s infinite",
+              filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.3))"
             }}
             alt="Scroll down arrow"
           />

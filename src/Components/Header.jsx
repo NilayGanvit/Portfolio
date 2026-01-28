@@ -5,6 +5,7 @@
  * user scrolls so that they can constantly reach any part of your page.
  */
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -105,5 +106,7 @@ const Header = () => {
     </div>
   );
 };
+
+Header.propTypes = {};
 
 export default Header;

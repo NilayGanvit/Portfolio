@@ -112,9 +112,12 @@ const Portfolio = () => {
               key={project.title}
               style={{
                 animation: `1s ease-out ${index * 0.1}s 1 slideInLeft`,
+                transition: "transform 0.2s ease, box-shadow 0.2s ease"
               }}
             >
-              <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title} project`}>
+              <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title} project`}
+                style={{ outline: "none" }}
+              >
                 <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
               </a>
               <p className="small">{project.description}</p>
